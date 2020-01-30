@@ -1,0 +1,134 @@
+﻿<File version="2">
+  <FileID>002fe98e-7603-4d53-bff2-4e7b056c6696</FileID>
+  <Code><![CDATA[##########################################################################
+# Created with: SAPIEN Technologies, Inc., PowerShell Studio 2012 v3.1.29
+# Created on:   21.02.2014 09:50
+# Created by:   Andreas
+# Organization: 
+##########################################################################
+
+
+#$Commandline = ("-test1","test1","-test1","test1")
+
+
+function Parse-Commandline 
+{ 
+<#
+	.SYNOPSIS
+		Parses the Commandline of a package executable
+
+	.DESCRIPTION
+		Parses the Commandline of a package executable
+
+	.PARAMETER  Commandline
+		The Commandline of the package executable
+
+	.EXAMPLE
+		$arguments = Parse-Commandline -Commandline $Commandline
+
+	.INPUTS
+		System.String
+
+	.OUTPUTS
+		System.Collections.Specialized.StringCollection
+#>
+
+	[OutputType([System.Collections.Specialized.StringCollection])]
+    Param([string]$CommandLine) 
+	
+    $Arguments = New-Object System.Collections.Specialized.StringCollection 
+	
+	if($CommandLine)
+	{
+	    #Find First Quote 
+	    $index = $CommandLine.IndexOf('"') 
+
+	    while ( $index -ne -1) 
+	    {#Continue as along as we find a quote 
+	        #Find Closing Quote 
+	        $closeIndex = $CommandLine.IndexOf('"',$index + 1) 
+	        if($closeIndex -eq -1) 
+	        { 
+	            break #Can’t find a match 
+	        } 
+	        $value = $CommandLine.Substring($index + 1,$closeIndex – ($index + 1)) 
+	        [void]$Arguments.Add($value) 
+	        $index = $closeIndex 
+
+	        #Find First Quote 
+	        $index = $CommandLine.IndexOf('"',$index + 1) 
+	    } 
+	}
+    return $Arguments 
+}
+
+function Convert-CommandLineToDictionary 
+{ 
+	<#
+	.SYNOPSIS
+		Parses and converts the commandline of a packaged executable into a Dictionary
+
+	.DESCRIPTION
+		Parses and converts the commandline of a packaged executable into a Dictionary
+
+	.PARAMETER  Dictionary
+		The Dictionary to load the value pairs into.
+
+	.PARAMETER  CommandLine
+		The commandline of the package executable
+
+	.PARAMETER  ParamIndicator
+		The character used to indicate what is a parameter.
+	
+	.EXAMPLE
+		$Dictionary = New-Object System.Collections.Specialized.StringDictionary
+		Convert-CommandLineToDictionary -Dictionary $Dictionary -CommandLine $Commandline  -ParamIndicator '-'
+	#>
+    Param(	[ValidateNotNull()]
+			[System.Collections.Specialized.StringDictionary]$Dictionary,
+			[string]$CommandLine, 
+			[char] $ParamIndicator) 
+
+	$Params = Parse-Commandline $CommandLine
+	
+    for($index = 0; $index -lt $Params.Count; $index++) 
+    { 
+        [string]$param = $Params[$index] 
+        #Clear the values 
+        $key = "" 
+        $value = "" 
+
+        if($param.StartsWith($ParamIndicator)) 
+        { 
+            #Remove the indicator 
+            $key = $param.Remove(0,1) 
+            if($index  + 1 -lt $Params.Count) 
+            { 
+                #Check if the next Argument is a parameter 
+                [string]$param = $Params[$index + 1] 
+                if($param.StartsWith($ParamIndicator) -ne $true ) 
+                { 
+                    #If it isn’t a parameter then set it as the value 
+                    $value = $param 
+                    $index++ 
+                } 
+            } 
+            $Dictionary[$key] = $value 
+        }#else skip 
+    } 
+}
+
+Convert-CommandLineToDictionary -CommandLine]]></Code>
+  <Assemblies>
+    <Assembly>System.Management.Automation, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</Assembly>
+    <Assembly>mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Assembly>
+    <Assembly>System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Assembly>
+    <Assembly>System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Assembly>
+    <Assembly>System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Assembly>
+    <Assembly>System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <Assembly>System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Assembly>
+    <Assembly>System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <Assembly>System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</Assembly>
+    <Assembly>System.ServiceProcess, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+  </Assemblies>
+</File>

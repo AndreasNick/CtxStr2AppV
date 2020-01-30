@@ -1,0 +1,19 @@
+Version 1.1
+============
+# Commandline Interface
+# Work on Some Bugs
+
+Version 1.2
+===========
+# More Compatibility for .net and com
+# New GUI
+# Stor full path for shortPath in Registry
+# Licensing System
+
+
+Version 1.3
+===========
+# Fix GUI Bug
+# FullLoad Switch
+# Package Asselerator Setting
+

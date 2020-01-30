@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SequencerTemplate xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <AllowMU>false</AllowMU>
+  <AppendPackageVersionToFilename>true</AppendPackageVersionToFilename>
+  <AllowLocalInteractionToCom>false</AllowLocalInteractionToCom>
+  <AllowLocalInteractionToObject>false</AllowLocalInteractionToObject>
+  <FileExclusions>
+    <string>[{CryptoKeys}]</string>
+    <string>[{Common AppData}]\Microsoft\Crypto</string>
+    <string>[{Common AppData}]\Microsoft\Search\Data</string>
+    <string>[{Cookies}]</string>
+    <string>[{History}]</string>
+    <string>[{Cache}]</string>
+    <string>[{Local AppData}]</string>
+    <string>[{Personal}]</string>
+    <string>[{Profile}]\Local Settings</string>
+    <string>[{Profile}]\NTUSER.DAT.LOG1</string>
+    <string>[{Profile}]\NTUSER.DAT.LOG2</string>
+    <string>[{Recent}]</string>
+    <string>[{Windows}]\Logs\CBS</string>
+    <string>[{Windows}]\Temp</string>
+    <string>[{Windows}]\WinSxS\ManifestCache</string>
+    <string>[{Windows}]\WindowsUpdate.log</string>
+    <string>[{AppVPackageDrive}]\$Recycle.Bin</string>
+    <string>[{AppVPackageDrive}]\System Volume Information</string>
+    <string>[{AppData}]\Microsoft\AppV</string>
+    <string>[{AppVPackageDrive}]\temp</string>
+    <string>[{ProgramFilesX64}]\Microsoft Application Virtualization\Sequencer</string>
+    <string>[{Profile}]\AppData\Local\GDIPFONTCACHEV1.DAT</string>
+    <string>[{Windows}]\Installer</string>
+    <string>[{Windows}]\ServiceProfiles\NetworkService\AppData\Roaming\Microsoft\SoftwareProtectionPlatform\</string>
+  </FileExclusions>
+  <RegExclusions>
+    <string>REGISTRY\MACHINE\SYSTEM\CurrentControlSet\services</string>
+    <string>REGISTRY\MACHINE\SYSTEM\CurrentControlSet\Control\MUI</string>
+    <string>REGISTRY\MACHINE\SOFTWARE\Classes\Installer</string>
+    <string>REGISTRY\MACHINE\SOFTWARE\MICROSOFT\Windows\CurrentVersion\Installer</string>
+    <string>REGISTRY\MACHINE\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\SPP</string>
+    <string>REGISTRY\MACHINE\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\SystemRestore</string>
+    <string>REGISTRY\MACHINE\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\SystemRestore\Volatile</string>
+    <string>REGISTRY\MACHINE\SOFTWARE\MICROSOFT\WINDOWS NT\CURRENTVERSION\SoftwareProtectionPlatform</string>
+    <string>REGISTRY\MACHINE\SOFTWARE\MICROSOFT\Windows\CurrentVersion\Installer</string>
+    <string>REGISTRY\MACHINE\SOFTWARE\Wow6432Node\Microsoft\Cryptography</string>
+    <string>REGISTRY\MACHINE\SOFTWARE\Wow6432Node\Microsoft\AppV</string>
+    <string>REGISTRY\MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\explorer</string>
+    <string>REGISTRY\MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall</string>
+    <string>REGISTRY\USER\.DEFAULT\SOFTWARE\Classes\Local Settings\MuiCache</string>
+    <string>REGISTRY\USER\[{AppVCurrentUserSID}]\Software\Microsoft\Windows\CurrentVersion\Explorer\StreamMRU</string>
+    <string>REGISTRY\USER\[{AppVCurrentUserSID}]\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\StreamMRU</string>
+    <string>REGISTRY\USER\[{AppVCurrentUserSID}]\Software\Microsoft\Windows\CurrentVersion\Explorer\Streams</string>
+    <string>REGISTRY\USER\[{AppVCurrentUserSID}]\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Explorer\Streams</string>
+    <string>REGISTRY\USER\[{AppVCurrentUserSID}]\Software\Microsoft\AppV</string>
+    <string>REGISTRY\USER\[{AppVCurrentUserSID}]\Software\Microsoft\Windows NT\CurrentVersion\SoftwareProtectionPlatform</string>
+    <string>REGISTRY\USER\[{AppVCurrentUserSID}]\Software\Microsoft\RestartManager</string>
+    <string>REGISTRY\USER\[{AppVCurrentUserSID}]\Software\Microsoft\GDIPlus</string>
+    <string>REGISTRY\USER\[{AppVCurrentUserSID}]\Software\Wow6432Node\Microsoft\AppV</string>
+  </RegExclusions>
+  <TargetOSes>
+    <OperatingSystems>Win2008R2RDS64</OperatingSystems>
+    <OperatingSystems>Win7</OperatingSystems>
+    <OperatingSystems>Win764</OperatingSystems>
+    <OperatingSystems>Win8</OperatingSystems>
+    <OperatingSystems>Win864</OperatingSystems>
+    <OperatingSystems>Win8RDS64</OperatingSystems>
+  </TargetOSes>
+</SequencerTemplate>

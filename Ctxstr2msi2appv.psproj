@@ -1,0 +1,16 @@
+﻿<Project>
+  <Version>1.1</Version>
+  <FileID>5c2d2364-ec9d-46e6-9a1c-ff449cac358a</FileID>
+  <ProjectType>0</ProjectType>
+  <Folders />
+  <Files>
+    <File ReferenceName="" Build="0">Startup.pss</File>
+    <File ReferenceName="Call-CtxStr2Msi_Form_psf" Build="0">CtxStr2Msi_Form.psf</File>
+    <File ReferenceName="Call-EditBox_ps1" Build="0" CommandExtension="True">EditBox.ps1</File>
+    <File ReferenceName="Call-Ctx2msi_Files_ps1" Build="0" CommandExtension="True">Ctx2msi_Files.ps1</File>
+    <File ReferenceName="Call-CtxStr_IconBin_ps1" Build="0" CommandExtension="True">CtxStr_IconBin.ps1</File>
+    <File ReferenceName="Call-commandline_pss" Build="0" CommandExtension="False">commandline.pss</File>
+    <File ReferenceName="Call-MessageFrom_psf" Build="0">MessageFrom.psf</File>
+    <File ReferenceName="Call-Globals_ps1" Build="0" CommandExtension="True">Globals.ps1</File>
+  </Files>
+</Project>

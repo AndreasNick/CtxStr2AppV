@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CtxStr2msi xmlns="http://schemas.nick-it.de/appv2msi">
+  <CtxStrType >Convert Windows 7 64 Bit Package (profile generation plattform)</CtxStrType>
+  <CtxStrBaseDir>c:\Program Files (x86)</CtxStrBaseDir>
+  <CtxStrPath />
+  <CtxStrPackagename />
+  <CtxStrDisplayName />
+  <CtxStrInstallDir />
+  <CtxStrProductcode />
+  <CtxStrUpgradecode />
+  <CtxStrVersion />
+  <CtxStrLanguage />
+  <CtxStrManufacturer />
+  <CtxStrSourcefile/>
+  <CtxStrApp64Bit />
+  <CtxStrCreateAppV />
+  <CtxStrAppActiveSetup />
+  <CtxStrAppMsiDialogs />
+  <CtxStrHashGuid />
+  <CtxStrInstallRootDir /> <!-- Main Directory for the Installation -->
+  <CtxStrDevicePath />
+  <ProjectRoot />
+  <FullLoad />
+  <AppVTemplate />
+  <AppVTemplatePath />
+  <CtxStr_EXCLUDE_DIR>
+    <Row field0="" field1="Path exclusion" />
+    <Row field0="20" field1="500" />
+    <Row field0="False" field1="\\Device\\C\\Windows" />
+    <Row field0="False" field1="\\Device\\C\\Windows\\assembly" />
+	<Row field0="True" field1="\\Device\\C\\Windows\\debug" />
+    <Row field0="False" field1="\\Device\\C\\Windows\\System32" />
+	<Row field0="True" field1="\\Device\\C\\Windows\\System" />
+	<Row field0="False" field1="\\Device\\C\\Windows\\SysWOW64" />
+    <Row field0="True" field1="\\Device\\C\\Windows\\System32\\wbem" />
+    <Row field0="False" field1="\\Device\\C\\Windows\\Installer" />
+	<Row field0="True" field1="\\Device\\C\\Windows\\PCHEALTH" />
+	<Row field0="True" field1="\\Device\\C\\ProgramData\\Microsoft\\Windows\\Start Menu" />
+	<Row field0="True" field1="\\Device\\C\\Documents and Settings" />
+	<Row field0="True" field1="\\Device\\C\\Dokumente und Einstellungen" />
+	<Row field0="True" field1="\\Device\\C\\Users\\Public\\Desktop" />
+	<Row field0="True" field1="\\Device\\C\\Windows\\win.ini" />
+	<Row field0="True" field1="\\Device\\C\\Windows\\ODBC.ini" />
+	<Row field0="True" field1="\\.CTX.Placeholder.txt" />
+  </CtxStr_EXCLUDE_DIR>
+  <CtxStr_PATH_SUBST>
+    <Row field0="" field1="Source path" field2="MSI substitution" />
+    <Row field0="20" field1="200" field2="200" />
+    <Row field0="True" field1="Device\\C\\Program Files \(x86\)$" field2="ProgramFilesFolder" />
+	<Row field0="True" field1="Device\\C\\Program Files$" field2="ProgramFilesFolder" />
+    <Row field0="True" field1="Device\\C\\Programme$" field2="ProgramFilesFolder" /> 
+	<Row field0="True" field1="Device\\C\\Programme\\Gemeinsame Dateien$" field2="CommonFilesFolder" /> 
+	<Row field0="True" field1="Device\\C\\Program Files \(x86\)\\Common Files$" field2="CommonFilesFolder" /> 
+	<Row field0="True" field1="Device\\C\\Program Files\\Common Files$" field2="CommonFilesFolder" />
+    <Row field0="True" field1="Device\\C\\Programme\\Common Files$" field2="CommonFilesFolder" /> 
+    <Row field0="True" field1="Device\\C\\ProgramData$" field2="CommonAppDataFolder" />
+	<Row field0="True" field1="Device\\C\\Windows$" field2="WindowsFolder" />
+	<Row field0="True" field1="Device\\C\\Windows\\Fonts$" field2="FontsFolder" />
+    <Row field0="True" field1="Device\\C\\Windows\\System32$" field2="SystemFolder" />
+	<Row field0="True" field1="Device\\C\\Windows\\SysWOW64" field2="SystemFolder" />
+  </CtxStr_PATH_SUBST>
+  <CtxStr_EXCLUDE_REG_HIVES>
+    <Row field0="" field1="Registry exclusion" />
+    <Row field0="20" field1="500" />
+    <Row field0="False" field1="/REGISTRY/MACHINE/" />
+    <Row field0="False" field1="/REGISTRY/MACHINE/SOFTWARE/Classes" />
+    <Row field0="True" field1="/REGISTRY/MACHINE/SYSTEM/CurrentControlSet/services" />
+    <Row field0="True" field1="/REGISTRY/MACHINE/SOFTWARE/Microsoft/Windows/CurrentVersion/Installer" />
+	<Row field0="True" field1="/REGISTRY/MACHINE/SOFTWARE/Microsoft/Windows/CurrentVersion/Uninstall" />
+	<Row field0="True" field1="/REGISTRY/MACHINE/SOFTWARE/Microsoft/Windows/CurrentVersion/Explorer"/>
+    <Row field0="True" field1="/REGISTRY/MACHINE/SOFTWARE/Microsoft/WBEM" />
+    <Row field0="True" field1="/REGISTRY/MACHINE/SOFTWARE/Microsoft/Windows NT/CurrentVersion/Fonts" />
+    <Row field0="True" field1="/REGISTRY/MACHINE/SOFTWARE/Microsoft/Windows/CurrentVersion/SideBySide" />
+    <Row field0="True" field1="/REGISTRY/MACHINE/SOFTWARE/Microsoft/Windows NT/CurrentVersion/SystemRestore" />
+	<Row field0="True" field1="/REGISTRY/MACHINE/SOFTWARE/Microsoft/Windows Search" />
+    <Row field0="True" field1="/REGISTRY/MACHINE/SOFTWARE/_ow6432Node/Microsoft/Windows/CurrentVersion/Installer" />
+	<Row field0="True" field1="/REGISTRY/MACHINE/SOFTWARE/_ow6432Node/Microsoft/Windows/CurrentVersion/Uninstall" />
+    <Row field0="True" field1="/REGISTRY/MACHINE/SOFTWARE/_ow6432Node/Microsoft/WBEM" />
+    <Row field0="True" field1="/REGISTRY/MACHINE/SOFTWARE/_ow6432Node/Microsoft/Windows NT/CurrentVersion/Fonts" />
+    <Row field0="True" field1="/REGISTRY/MACHINE/SOFTWARE/_ow6432Node/Microsoft/Windows/CurrentVersion/SideBySide" />
+    <Row field0="True" field1="/REGISTRY/MACHINE/SOFTWARE/_ow6432Node/Microsoft/Windows NT/CurrentVersion/SystemRestore" />
+	<Row field0="True" field1="/REGISTRY/MACHINE/SOFTWARE/_ow6432Node/Microsoft/Windows Search" />	
+    <Row field0="False" field1="/REGISTRY/USER/.DEFAULT" />
+    <Row field0="False" field1="/REGISTRY/USER/CurrentUser" />
+	<Row field0="False" field1="/REGISTRY/USER/CurrentUser_CLASSES" />
+	<Row field0="True" field1="/REGISTRY/USER/CurrentUser_CLASSES/_wow6432Node" />
+	<Row field0="True" field1="/REGISTRY/USER/CurrentUser/Software/Classes/Local Settings/MuiCache" />
+	<Row field0="True" field1="/REGISTRY/USER/CurrentUser/Software/Microsoft/Windows/CurrentVersion/Explorer"/>
+    <Row field0="True" field1="/REGISTRY/USER/CurrentUser/Software/Microsoft/Windows/CurrentVersion/Explorer/RecentDocs" />
+    <Row field0="True" field1="/REGISTRY/USER/CurrentUser/Software/Microsoft/Windows/CurrentVersion/Explorer/StartPage" />
+    <Row field0="True" field1="/REGISTRY/USER/CurrentUser/Software/Microsoft/Windows/CurrentVersion/Explorer/StartPage2" />
+    <Row field0="True" field1="/REGISTRY/USER/CurrentUser/Software/Microsoft/Windows/CurrentVersion/Internet Settings" />
+    <Row field0="True" field1="/REGISTRY/USER/CurrentUser/Software/Microsoft/Windows/CurrentVersion/Shell Extensions/Cached" />
+	<Row field0="True" field1="/REGISTRY/USER/CurrentUser/Software/_ow6432Node/Classes/Local Settings/MuiCache" />
+	<Row field0="True" field1="/REGISTRY/USER/CurrentUser/Software/_ow6432Node/Microsoft/Windows/CurrentVersion/Explorer"/>
+    <Row field0="True" field1="/REGISTRY/USER/CurrentUser/Software/_ow6432Node/Microsoft/Windows/CurrentVersion/Explorer/RecentDocs" />
+    <Row field0="True" field1="/REGISTRY/USER/CurrentUser/Software/_ow6432Node/Microsoft/Windows/CurrentVersion/Explorer/StartPage" />
+    <Row field0="True" field1="/REGISTRY/USER/CurrentUser/Software/_ow6432Node/Microsoft/Windows/CurrentVersion/Explorer/StartPage2" />
+    <Row field0="True" field1="/REGISTRY/USER/CurrentUser/Software/_ow6432Node/Microsoft/Windows/CurrentVersion/Internet Settings" />
+    <Row field0="True" field1="/REGISTRY/USER/CurrentUser/Software/_ow6432Node/Microsoft/Windows/CurrentVersion/Shell Extensions/Cached" />
+	<Row field0="True" field1="CitrixAIEKeyVirtualStatus" />
+	<Row field0="True" field1="CitrixAIEDeletedValues" />
+  </CtxStr_EXCLUDE_REG_HIVES>
+  <CtxStr_REG_SUBST>
+    <Row field0="" field1="Registry value string" field2="MSI substitution" />
+    <Row field0="20" field1="200" field2="200" />
+    <Row field0="True" field1="C:\\Dokumente und Einstellungen\\All Users\\Anwendungsdaten\\" field2="[CommonAppDataFolder]" />
+	<Row field0="True" field1="C:\\Documents and Settings\\All Users\\application data\\" field2="[CommonAppDataFolder]" />
+	<Row field0="True" field1="C:\\Program Files \(x86\)\\Common Files\\" field2="[CommonFilesFolder]" />
+	<Row field0="True" field1="C:\\Program Files\\Common Files\\" field2="[CommonFilesFolder]" />
+	<Row field0="True" field1="C:\\Program Files \(x86\)\\" field2="[ProgramFilesFolder]" />
+	<Row field0="True" field1="C:\\Programme\\Gemeinsame Dateien\\" field2="[CommonFilesFolder]" />
+	<Row field0="True" field1="C:\\Programme\\" field2="[ProgramFilesFolder]" />
+	<Row field0="True" field1="C:\\Windows\\SysWOW64\\" field2="[SytemFolder]" />
+	<Row field0="True" field1="C:\\Windows\\System32\\" field2="[SytemFolder]" />
+	<Row field0="True" field1="C:\\Windows\\" field2="[WindowsFolder]" />
+	<Row field0="True" field1="C:\\ProgramData\\" field2="[CommonAppDataFolder]" />
+  </CtxStr_REG_SUBST>
+  <CtxStr_Shortcuts>
+    <Row field0="" field1="Name" field2="Destination" field3="InitalExe" field4="WorkingDir" field5="IconPath" />
+    <Row field0="65" field1="200" field2="130" field3="600" field4="600" field5="600" />
+  </CtxStr_Shortcuts>
+</CtxStr2msi>

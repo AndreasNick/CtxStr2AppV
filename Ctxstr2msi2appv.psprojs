@@ -1,0 +1,11 @@
+﻿<ProjectState>
+  <Version>1.0</Version>
+  <FileID>5c2d2364-ec9d-46e6-9a1c-ff449cac358a</FileID>
+  <OpenFolders />
+  <OpenFiles>
+    <File>Ctx2msi_Files.ps1</File>
+    <File>CtxStr_IconBin.ps1</File>
+    <File>CtxStr2Msi_Form.psf</File>
+    <File>Globals.ps1</File>
+  </OpenFiles>
+</ProjectState>

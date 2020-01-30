@@ -1,0 +1,5 @@
+Suche noch doppelten Reistrierunsgeinträgen. Davon ist aktuell MultiSZ ausgenommen
+
+Bei der Suche gibt es Fehlermeldungen. Diese können wie folge vermieden werden:
+
+http://stackoverflow.com/questions/1341847/special-character-in-xpath-query

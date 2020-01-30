@@ -1,0 +1,249 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0066)http://manpages.ubuntu.com/manpages/intrepid/man1/reglookup.1.html -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><HTML 
+lang="en" lang="en" dir="ltr" xml:lang="en" 
+xmlns="http://www.w3.org/1999/xhtml"><HEAD profile="http://a9.com/-/spec/opensearch/1.1/"><META 
+content="IE=10.000" http-equiv="X-UA-Compatible">
+         
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">         
+<LINK title="Ubuntu Manpage Search" href="/ubuntu-manpage-search.xml" rel="search" 
+type="application/opensearchdescription+xml">         <TITLE>Ubuntu Manpage:     
+  reglookup - windows NT+ registry reader/lookup tool </TITLE>         <LINK 
+href="Ubuntu%20Manpage%20reglookup%20-%20windows%20NT+%20registry%20reader-lookup%20tool-Dateien/reset.css" 
+rel="stylesheet" type="text/css">         <LINK href="Ubuntu%20Manpage%20reglookup%20-%20windows%20NT+%20registry%20reader-lookup%20tool-Dateien/styles.css" 
+rel="stylesheet" type="text/css">         <LINK href="Ubuntu%20Manpage%20reglookup%20-%20windows%20NT+%20registry%20reader-lookup%20tool-Dateien/manpages.css" 
+rel="stylesheet" type="text/css">         <LINK href="/assets/light/images/favicon.ico" 
+rel="shortcut icon" type="image/x-icon">         
+<SCRIPT language="JavaScript" src="Ubuntu%20Manpage%20reglookup%20-%20windows%20NT+%20registry%20reader-lookup%20tool-Dateien/functions.js"></SCRIPT>
+     
+<META name="GENERATOR" content="MSHTML 10.00.9200.16612"></HEAD>     
+<BODY>
+<DIV id="container">
+<DIV id="container-inner">
+<DIV id="header">
+<H1 id="ubuntu-header"><A href="http://manpages.ubuntu.com/">Ubuntu 
+manuals</A></H1></DIV>
+<DIV id="subheader">
+<DIV id="subheader-search">
+<FORM id="cse-search-box" action="/cgi-bin/search.py" method="get"><INPUT name="q" 
+tabindex="1" id="search-box-input" type="text">                             
+<BUTTON name="op" id="search-box-button" type="submit"><SPAN>go</SPAN></BUTTON>  
+                           <INPUT name="cx" type="hidden" value="003883529982892832976:5zl6o8w6f0s"> 
+                            <INPUT name="cof" type="hidden" value="FORID:9">     
+                        <INPUT name="ie" type="hidden" value="UTF-8">            
+                 
+<SCRIPT src="Ubuntu%20Manpage%20reglookup%20-%20windows%20NT+%20registry%20reader-lookup%20tool-Dateien/brand.js" type="text/javascript"></SCRIPT>
+                         </FORM></DIV>
+<DIV class="subheader-menu">
+<SCRIPT>navbar();</SCRIPT>
+                     </DIV></DIV>
+<DIV class="clearfix content-area" id="content">
+<DIV class="level-4-nav" id="toc"></DIV>
+<SCRIPT>distroAndSection();</SCRIPT>
+ Provided by: <A 
+href="https://launchpad.net/ubuntu/intrepid/+package/reglookup">reglookup_0.4.0-1_i386</A> 
+<A title="Report a bug in the content of this documentation" href="https://bugs.launchpad.net/ubuntu/+source/reglookup/+filebug-advanced"><IMG 
+alt="bug" src="Ubuntu%20Manpage%20reglookup%20-%20windows%20NT+%20registry%20reader-lookup%20tool-Dateien/bug.png" 
+border="0"></A><BR><BR>
+<PRE></PRE>
+<H4><B>NAME</B></H4>
+<PRE>       reglookup - windows NT+ registry reader/lookup tool
+
+</PRE>
+<H4><B>SYNOPSIS</B></H4>
+<PRE>       reglookup [options] <U>registry-file</U>
+
+</PRE>
+<H4><B>DESCRIPTION</B></H4>
+<PRE>       reglookup  is designed to read windows registry elements and print them
+       out to stdout in a CSV-like format. It has filtering options to  narrow
+       the  focus of the output. This tool is designed to work with on windows
+       NT/2K/XP/2K3 registries, though your mileage may vary.
+
+</PRE>
+<H4><B>OPTIONS</B></H4>
+<PRE>       reglookup accepts the following parameters:
+
+       <B>-p</B> <U>prefix-filter</U>
+              Specify a  path  prefix  filter.  Only  keys/values  under  this
+              registry path will be output.
+
+       <B>-t</B> <U>type-filter</U>
+              Specify  a  type filter. Only elements which match this registry
+              data type will be printed.  Acceptable  values  are:  NONE,  SZ,
+              EXPAND_SZ,  BINARY,  DWORD, DWORD_BE, LINK, MULTI_SZ, RSRC_LIST,
+              RSRC_DESC, RSRC_REQ_LIST, QWORD and KEY
+
+       <B>-h</B>     Enables the printing of a column header row. (default)
+
+       <B>-H</B>     Disables the printing of a column header row.
+
+       <B>-s</B>     Adds four additional columns to  output  containing  information
+              from  key  security  descriptors. The columns are: owner, group,
+              sacl, dacl.  (This feature’s output probably contains bugs right
+              now.)
+
+       <B>-S</B>     Disables   the  printing  of  security  descriptor  information.
+              (default)
+
+       <B>-v</B>     Verbose output. (Currently does little to nothing.)
+
+       <U>registry-file</U>
+              Required argument. Specifies the location of the  registry  file
+              to  read.  Typically,  these  files  will  be  found  on  a NTFS
+              partition under %SystemRoot%/system32/config.
+
+</PRE>
+<H4><B>OUTPUT</B></H4>
+<PRE>       reglookup generates comma-separated values (CSV)  and  writes  them  to
+       stdout.  The format is designed to simplify parsing algorithms of other
+       tools by quoting CSV special  characters  using  a  common  hexadecimal
+       format.   Specifically,  special  characters  or  non-ascii  bytes  are
+       converted to "\xQQ" where QQ is the hexadecimal value for the byte.
+
+       The number of columns or fields in each line is fixed for a  given  run
+       of  the  program,  but  may  vary  based  on  the  command line options
+       provided.  See the header line for  information  on  which  fields  are
+       available and what they contain.
+
+       Some  fields  in  some  lines  may  contain  sub-fields  which  require
+       additional  delimiters.  If  these  sub-delimiters   occur   in   these
+       sub-fields,  they  are  also encoded in the same way as commas or other
+       special characters are.  Currently, the second, third, and fourth level
+       delimiters  are "|", ":", and " ", respectively. These are particularly
+       important to take note of when security attributes are printed.  Please
+       note   that   these  delimiters  may  occur  in  fields  that  are  not
+       sub-delimited, and should not be interpreted as special.
+
+       Security attributes of registry keys have a complex structure which  is
+       outlined  here.  Each key will generally have an associated ACL (Access
+       Control List), which is made up of ACEs (Access Control Entries).  Each
+       ACE  is  delimited by the secondary delimiter mentioned above, "|". The
+       fields within an ACE are delimited by the third-level  delimiter,  ":",
+       and consist of a SID, the ACE type (ALLOW, DENY, etc), a list of access
+       rights, and a list of flags. The last two fields are delimited  by  the
+       fourth-level delimiter " ". These final lists are simply human-readable
+       interpretations of bits. The access  rights  abbreviations  are  listed
+       below along with their Microsoft-assigned names:
+
+             QRY_VAL       KEY_QUERY_VALUE
+             SET_VAL       KEY_SET_VALUE
+             CREATE_KEY    KEY_CREATE_SUB_KEY
+             ENUM_KEYS          KEY_ENUMERATE_SUB_KEYS
+             NOTIFY        KEY_NOTIFY
+             CREATE_LNK    KEY_CREATE_LINK
+             WOW64_64      KEY_WOW64_64KEY
+             WOW64_32      KEY_WOW64_32KEY
+             DELETE        DELETE
+             R_CONT        READ_CONTROL
+             W_DAC         WRITE_DAC
+             W_OWNER       WRITE_OWNER
+             SYNC          SYNCHRONIZE
+             SYS_SEC       ACCESS_SYSTEM_SECURITY
+             MAX_ALLWD          MAXIMUM_ALLOWED
+             GEN_A         GENERIC_ALL
+             GEN_X         GENERIC_EXECUTE
+             GEN_W         GENERIC_WRITE
+             GEN_R         GENERIC_READ
+
+       And the meaning of each flag is:
+
+             OI  Object Inherit
+             CI  Container Inherit
+             NP  Non-Propagate
+             IO  Inherit Only
+             IA  Inherited ACE
+
+       Please see the following references for more information:
+
+               <A href="http://msdn2.microsoft.com/en-gb/library/ms724878.aspx">http://msdn2.microsoft.com/en-gb/library/ms724878.aspx</A>
+               <A href="http://msdn2.microsoft.com/en-gb/library/aa374892.aspx">http://msdn2.microsoft.com/en-gb/library/aa374892.aspx</A>
+               <A href="http://msdn2.microsoft.com/en-us/library/aa772242.aspx">http://msdn2.microsoft.com/en-us/library/aa772242.aspx</A>
+               <A href="http://support.microsoft.com/kb/220167">http://support.microsoft.com/kb/220167</A>
+
+       Note  that some of the bits listed above have either not been allocated
+       by Microsoft, or simply aren’t documented. If any bits are set  in  the
+       above  two  fields that aren’t recognized, a hexidecimal representation
+       of all of these mystery bits  will  be  included  in  the  output.  For
+       instance,  if  the  lowest bit and third lowest bit were not recognized
+       while being set, the number "0x5" would be included as  an  element  in
+       the list.
+
+       While  the  ACL/ACE output format is mostly stable at this point, minor
+       changes may be introduced in future versions.
+
+</PRE>
+<H4><B>EXAMPLES</B></H4>
+<PRE>       To read and print the contents of an entire system registry file:
+
+            reglookup /mnt/win/c/WINNT/system32/config/system
+
+       To limit the output to just those entries under the Services key:
+
+            reglookup -p /ControlSet002/Services /mnt/win/c/WINNT/system32/config/system
+
+       To limit the output to all registry values of type BINARY:
+
+            reglookup -t BINARY /mnt/win/c/WINNT/system32/config/system
+
+       And to limit the output to BINARY values under the Services key:
+
+            reglookup -t BINARY -p /ControlSet002/Services /mnt/win/c/WINNT/system32/config/system
+
+</PRE>
+<H4><B>BUGS</B></H4>
+<PRE>       This program has only been tested on a few different systems.   (Please
+       report  results  to  the  development list if you test it on Windows NT
+       4.0, 2003, or Vista  registries.  Also,  if  you  test  on  any  64-bit
+       architecture, please contact us.)
+
+       Verbose output is not working.
+
+       The SID conversions haven’t been carefully checked for accuracy.
+
+       The   MTIME   conversions  appear  correctly  produce  the  stored  UTC
+       timestamp.  However, due to the periodicity of registry writes, and the
+       complexity  of the conversion, a small amount of error (on the order of
+       seconds) may be  possible.  The  documentation  available  online  from
+       Microsoft on this field is very poor.
+
+       Backslashes  are  currently  considered  special  characters,  to  make
+       parsing easier for automated tools. However, this causes  paths  to  be
+       difficult to read.
+
+       You’ll   notice  that  registry  paths  aren’t  all  the  same  as  the
+       equivalents you see in the windows registry  editor.  This  is  because
+       Windows constructs the registry view from multiple registry files, each
+       with their own roots. This utility merely shows  what  exists  under  a
+       single  root.  This  isn’t really a bug, but one should be aware of the
+       differences in path.
+
+</PRE>
+<H4><B>CREDITS</B></H4>
+<PRE>       This program was initially based on editreg.c by Richard Sharpe. It has
+       since  been  rewritten  to  use  a  modified version the regfio library
+       written by Gerald Carter. Heavy modifications to the  library  and  the
+       original command line interface have been done by Timothy D. Morgan.
+
+       Please see source code for a full list of copyrights.
+
+</PRE>
+<H4><B>LICENSE</B></H4>
+<PRE>       Please see the file "LICENSE" included with this software distribution.
+
+       This program is distributed in the hope that it  will  be  useful,  but
+       WITHOUT   ANY   WARRANTY;   without   even   the  implied  warranty  of
+       MERCHANTABILITY or FITNESS  FOR  A  PARTICULAR  PURPOSE.  See  the  GNU
+       General Public License version 2 for more details.
+
+</PRE>
+<H4><B>SEE</B> <B>ALSO</B></H4>
+<PRE>       <A href="http://manpages.ubuntu.com/manpages/intrepid/man1/reglookup-timeline.1.html">reglookup-timeline</A>(1)
+
+                           File Conversion Utilities              <A href="http://manpages.ubuntu.com/manpages/intrepid/man1/reglookup.1.html">reglookup</A>(1)
+</PRE></DIV></DIV>
+<DIV id="copyright">
+<P>                Powered by the <A href="https://launchpad.net/ubuntu-manpage-repository">Ubuntu 
+Manpage Repository</A> generator                maintained by <A href="http://blog.dustinkirkland.com/">Dustin 
+Kirkland</A><BR>© 2010 Canonical Ltd. Ubuntu and Canonical are registered 
+trademarks of Canonical Ltd.                 </P></DIV></DIV></BODY></HTML>

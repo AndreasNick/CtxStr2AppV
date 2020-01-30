@@ -1,0 +1,30 @@
+#ubuntu-header {
+	left: 16px; top: 16px; width: 196px; background-image: url("/img/header_logo.png");
+}
+#subheader-search {
+	padding-right: 14px; padding-left: 14px;
+}
+#copyright {
+	background-position: 827px 38px; padding-bottom: 10px;
+}
+#content pre {
+	line-height: 16px;
+}
+.level-4-nav li a b {
+	text-transform: capitalize; font-weight: normal;
+}
+hr {
+	border-width: medium medium 1px; border-style: none none dotted; border-color: currentColor currentColor rgb(51, 51, 51);
+}
+pre img {
+	margin: 4px; vertical-align: middle;
+}
+table {
+	background: white; border: currentColor; width: 100%;
+}
+#content td {
+	border: currentColor;
+}
+#content table table td {
+	border-bottom-color: rgb(204, 204, 204); border-bottom-width: 1px; border-bottom-style: dotted;
+}

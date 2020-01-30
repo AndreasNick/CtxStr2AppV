@@ -1,0 +1,20 @@
+<license>
+  <Customer>FreeToUse</Customer>
+  <Count>5</Count>
+  <Type>Standard</Type>
+  <sus>2014 - 05 - 31</sus>
+  <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+    <SignedInfo>
+      <CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315" />
+      <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" />
+      <Reference URI="">
+        <Transforms>
+          <Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" />
+        </Transforms>
+        <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <DigestValue>P9UTfoyy9vgIPIA9D/9BQQiCNKA=</DigestValue>
+      </Reference>
+    </SignedInfo>
+    <SignatureValue>BBihYnudPDv9rQ8tc0Pw/wNmACPvZJ2VcmMiKKVry6MNnZ4aJvrj5+CH5+rBk4MU0WDiI6ZNi7zhYFiQtPTse45jBsZV0q10gfT1N086VkHxAxl6efFJLoy+jrX0Aj8h3qPNifRZi8FS8/hAui2tNnsr4pXTQXRsh6D49oMIi4hz1NBAFlNqPotuOwILYgKHWV8OZrlXxSv0ItJ31nW5IXbTJYu9bo+x4UZWzqoGLtipYzlJVzv9nSGAlkkh3rphsXS9vglp8kauUEovoDIPszXR+dOZr1HVbMkaVRFbtXsBHrTn2xG7H9ffLuXZp1qXPS90pLDhi0fmB5vyaWSRTA==</SignatureValue>
+  </Signature>
+</license>
